@@ -6,7 +6,16 @@ import sys
 # a solution that is more efficient than the naive 
 # recursive solution
 def eating_cookies(n, cache=None):
-  pass
+  if n == 0:
+    return 1
+  elif n == 1:
+    return n
+  elif n == 2:
+    return n  
+  else:
+    return eating_cookies(n-1, cache=None) + eating_cookies(n-2, cache=None) + eating_cookies(n-3, cache=None)
+
+  
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
