@@ -35,3 +35,27 @@ You can also test your implementation manually by executing `python recipe_batch
 
  * If there's a dictionary operation you aren't sure of how to perform in Python, look it up!
  * What's the _minimum_ number of loops we need to perform in order to write a working implementation?
+
+POLYA Process
+
+ 1. Ask Q's:
+    - Only whole integers or fractions too?
+    - All measurement units will be equal for both keys?
+  
+  2. Planning
+    -two arguments passed in 
+        1) ingredients needed with values
+        2) ingredients available with values
+    
+    - Instantiate a counter 
+    - While all available_ingredients are > 0:
+
+      - Loop over the available ingredients dictionary and subtract each value by the required value in the needed ingredients dictionary
+
+        If all values are positive than increment counter by 1
+        Else return counter
+
+  3. Implementation - see code
+
+  4. Optimization 
+      - Nested for loops - time complexity is quadratic and could be improved
